@@ -3,8 +3,8 @@ class Solution {
         int size = temperatures.length;
         int[] ans = new int[size];
         int[] stack = new int[size];
-        int top = 0;
-        for (int i = 0; i < size; i++) {
+        int top = -1;
+        for (int i = 0; i< size; i++) {
             int temp = temperatures[i];
             while ( top>=0&&temp > temperatures[stack[top]]) {
                 int index = stack[top--];
